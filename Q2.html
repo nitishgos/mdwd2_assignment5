@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Hover Animation</title>
+<style>
+    .container {
+  perspective: 1000px; /* Adding perspective to the container */
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: #3498db;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s; /* Adding transition for smooth animation */
+}
+
+.box:hover {
+  transform: rotateY(180deg); /* Rotate the box on hover */
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="box">
+    Hover over me
+  </div>
+</div>
+
+</body>
+</html>

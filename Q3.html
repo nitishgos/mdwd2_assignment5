@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouse Hover Gradient Effect</title>
+  <style>
+    body, html {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      Hover over me!
+    </div>
+  </div>
+  <script>
+    document.addEventListener("mousemove", function(event) {
+  const mouseX = event.pageX;
+  const mouseY = event.pageY;
+
+  const gradientX = mouseX / window.innerWidth * 100;
+  const gradientY = mouseY / window.innerHeight * 100;
+
+  const gradientStyle = "radial-gradient(at " + gradientX + "% " + gradientY + "%, #ff0000, #00ff00)";
+
+  document.querySelector(".content").style.background = gradientStyle;
+});
+
+  </script>
+</body>
+</html>

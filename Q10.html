@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chessboard</title>
+    <style>
+        .chessboard {
+    display: flex;
+    flex-direction: column;
+    width: 400px; /* Adjust according to your preference */
+    height: 400px; /* Adjust according to your preference */
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.square {
+    width: 50px; /* Adjust according to your preference */
+    height: 50px; /* Adjust according to your preference */
+    background-color: #f0d9b5; /* Light square color */
+}
+
+/* Alternate the colors for the chessboard */
+.row:nth-child(even) .square:nth-child(odd),
+.row:nth-child(odd) .square:nth-child(even) {
+    background-color: #b58863; /* Dark square color */
+}
+
+    </style>
+</head>
+<body>
+    <div class="chessboard">
+        <div class="row">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+        </div>
+        <div class="row">
+            <!-- Repeat the above div 8 times -->
+        </div>
+        <!-- Repeat the above row div 8 times -->
+    </div>
+</body>
+</html>

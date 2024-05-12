@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Limit Multiline Text</title>
+<style>
+  .multiline-text {
+    /* Fallback for non-webkit browsers */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    /* Number of lines to display */
+    -webkit-line-clamp: 3; /* Change this to the desired number of lines */
+    /* Adjust this value based on the line height and font size */
+    max-height: calc(1.2em * 3);
+  }
+</style>
+</head>
+<body>
+  <div class="multiline-text">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rutrum dui ac tortor sodales, ac laoreet dui rutrum. Sed at volutpat nisi. Nulla facilisi. Cras sit amet turpis eget tortor laoreet varius. Sed quis orci nec lectus rutrum congue. Proin lacinia, nunc vitae pharetra viverra, libero purus vulputate ex, eget condimentum nisi nulla eget velit.
+  </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertical Menubar</title>
+  <style>
+    /* Basic styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Style for the menu bar */
+.menubar {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  z-index: 1000;
+}
+
+/* Style for the menu items */
+.menubar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menubar ul li {
+  margin-bottom: 10px;
+}
+
+.menubar ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Change the position to the right side if needed */
+.right-side {
+  right: 0;
+  left: auto;
+}
+
+  </style>
+</head>
+<body>
+  <div class="menubar" id="menubar">
+    <!-- Your menu items here -->
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+  
+  <!-- Rest of your content goes here -->
+  
+  <script>
+    // JavaScript to toggle the position of the menubar
+
+const menubar = document.getElementById('menubar');
+
+// Function to toggle the class for changing position
+function togglePosition() {
+  menubar.classList.toggle('right-side');
+}
+
+// Example: Toggle the position when a button is clicked
+const toggleButton = document.createElement('button');
+toggleButton.textContent = 'Toggle Position';
+toggleButton.addEventListener('click', togglePosition);
+document.body.appendChild(toggleButton);
+
+  </script>
+</body>
+</html>
